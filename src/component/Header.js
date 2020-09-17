@@ -1,38 +1,16 @@
 import React from 'react';
-import Todo from './Todo';
-import Todolist from './Todolist';
-import DeleteList from './DeleteList';
-import { Link, Switch, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-function Header(props) {
+function Header() {
   return (
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">To Do</Link>
-          </li>
-          <li>
-            <Link to="/todo-list">Todo List</Link>
-          </li>
-          <li>
-            <Link to="/delete-list">Delete List</Link>
-          </li>
-        </ul>
-      </nav>
-      <Switch>
-        <Route exact path="/">
-          <Todo onSubmit={props.onSubmit} />
-        </Route>
-        <Route path="/todo-list">
-          <Todolist tasks={props.tasks} />
-        </Route>
-        <Route path="/delete-list">
-          <DeleteList onDelete={props.onDelete} />
-        </Route>
-      </Switch>
-    </header>
-
+    <div className="header-div">
+      <div className="list-view">
+        <Link to="/">My Todolist</Link>
+      </div>
+      <div className="add-view">
+        <Link to="/add-new-todo">Add new Todo</Link>
+      </div>
+    </div>
   );
 }
 

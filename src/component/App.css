@@ -1,47 +1,140 @@
-.App {
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4"%3E%3Cpath fill="%239C92AC" fill-opacity="0.4" d="M1 3h1v1H1V3zm2-2h1v1H3V1z"%3E%3C/path%3E%3C/svg%3E');
+}
+
+.todolist {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 60vh;
+  background-color: #fff;
+  width: 30rem;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+.card-header {
   text-align: center;
+  border-bottom: 1px solid #dbdbdb;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.list-wrapper {
+  max-height: 200px;
+  overflow-y: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.list-item {
+  border-bottom: 1px solid #dbdbdb;
+  height: 2rem;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.add-button, .add-input {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  margin: 5px;
+  margin-top: 15px;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.add-button {
+  height: 2.3rem;
+  width: 20%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-input {
+  height: 2rem;
+  width: 70%;
+  padding-left: 10px;
+  margin-left: 10px;
 }
 
-.abc {
-  color: red;
+.edit-button, .delete-button, .save-button {
+  display: block;
+  float: right;
+  margin-right: 0.5rem;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  font-size: 14px;
+  width: 8%;
+  padding: 5px;
 }
 
-nav li {
+.edit-button, .save-button {
+  width: 12%;
+}
+
+.save-input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.icon::before {
+  content: "✔";
+  color: green;
+  margin-right: 5px;
+}
+
+.text {
   display: inline;
-  padding-right: 2rem;
+}
+
+.input {
+  height: 2rem;
+  width: 73%;
+  padding-left: 5px;
+}
+
+.delete-all-button {
+  margin-left: 37%;
+  margin-top: 2rem;
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.header-div {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.list-view, .add-view {
+  width: 50%;
+  height: 3rem;
+  text-align: center;
+  background-color: #000;
+  padding: 1rem;
+  font-size: 40px;
+}
+
+.list-view > a, .add-view > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.edit-button:hover, .save-button:hover {
+  background-color: #8cff66;
+}
+
+.delete-all-button:hover, .delete-button:hover {
+  background-color: #ff6666;
+}
+
+.add-button:hover {
+  background-color: #80e5ff;
+}
+
+.list-view > a:hover, .add-view > a:hover {
+  color: #ff4d4d;
 }
